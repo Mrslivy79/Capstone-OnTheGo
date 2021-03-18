@@ -1,3 +1,3 @@
 export default () => `
-<h1>Forms</h1>
+  <h1>Day</h1>
 `;

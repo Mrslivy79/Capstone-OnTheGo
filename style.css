@@ -1,162 +1,111 @@
 * {
-  box-sizing: border-box;
-}
-
-/* Style the body */
-body {
-  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
 }
 
-/* Header/logo Title */
-.header {
-  padding: 80px;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
+html {
+  font-size: 62.5%;
 }
 
-/* Increase the font size of the heading */
-.header h1 {
-  font-size: 40px;
-}
-
-/* Style the top navigation bar */
-nav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-/* Style the navigation bar links */
-nav a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-/* Right-aligned link */
-nav a.right {
-  float: right;
-}
-
-/* Change color on hover */
-nav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Column container */
-.row {
-  display: -ms-flexbox; /* IE10 */
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #12121f; "Background not changing"
+  color: #eee;
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
+  justify-content: center; "Not going to the center"
+  align-items: center;
 }
 
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
-  background-color: #f1f1f1;
-  padding: 20px;
+.calendar {
+  width: 45rem;
+  height: 52rem;
+  background-color: #222227; "Box shadow color not changing"
+  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
 }
 
-/* Main column */
-.main {
-  -ms-flex: 70%; /* IE10 */
-  flex: 70%;
-  background-color: white;
-  padding: 20px;
-}
-
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
+.month {
   width: 100%;
-  padding: 20px;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
+  height: 12rem;
+  background-color: #167e56;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
   text-align: center;
-  background: #ddd;
+  text-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.5;
 }
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {
-    flex-direction: column;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  nav a {
-    float: none;
-    width: 100%;
-  }
-}
-
-/* Style inputs */
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
+.month i {
+  font-size: 2.5rem;
   cursor: pointer;
 }
 
-input[type=submit]:hover {
-  background-color: #45a049;
+.month h1 {
+font-size: 3rem;
+font-weight: 400;
+text-transform: uppercase;
+letter-spacing: 0.2rem;
+margin-bottom: 1rem;
 }
 
-/* Style the container/contact section */
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 10px;
+.month p {
+font-size: 1.6rem;
 }
 
-/* Create two columns that float next to eachother */
-.column {
-  float: left;
-  width: 50%;
-  margin-top: 6px;
-  padding: 20px;
+.weekdays {
+  width: 100%;
+  height: 5rem;
+  padding: 0, 0.4rem;     "Not lining out"
+  display: flex;
+  align-items: center;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.weekdays div {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  width: calc(44.2tem/7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
+.days {
+  width: 100%;
+  display: flex; "Days Not Wrapping"
+  flex-wrap: wrap;
+  padding: 0.2rem;
+}
+
+.days div {
+  font-size: 1.4rem;
+  margin: 0.3rem;      "Days should be lined out"
+  width: calc(40.2/7);
+  height: 5rem;
+  display: flex;
+  justify-content: center;     "Calendar should be showing"
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgbs(0, 0, 0, 0.5);
+  transition: background-color 0.2;
   }
+
+  .days div:hover:not(today) {
+    background-color: #262626;
+    border: 0.2rem solid #777;
+    cursor: pointer;
+  }
+
+  .prev-date
+  .next-date {
+    opacity: 0.5;
+  }
+
+.today {
+  background-color: #167e56;
 }
 
-footer{
-  padding: 20px;
-  text-align: center;
-  background: #333;
 
-}

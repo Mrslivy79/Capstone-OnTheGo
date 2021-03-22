@@ -1,21 +1,21 @@
-// import Navigo from "navigo";
-// import { capitalize } from "lodash";
-// import * as state from "./store";
-// import { Header, Nav, Main, Footer } from "./components";
+import Navigo from "navigo";
+import { capitalize } from "lodash";
+import * as state from "./store";
+import { Header, Nav, Main, Footer } from "./components";
 
-// const router = new Navigo(window.location.origin);
-// router.updatePageLinks();
+const router = new Navigo(window.location.origin);
+router.updatePageLinks();
 
-// function render(st) {
-//   document.querySelector("#root").innerHTML = `
-//   ${Header()}
-//   ${Nav()}
-//   ${Main()}
-//   ${Footer()}
-// `;
-// }
+function render(st) {
+  document.querySelector("#root").innerHTML = `
+  ${Header()}
+  ${Nav()}
+  ${Main()}
+  ${Footer()}
+`;
+}
 
-// render(state.Day);
+render(state.Day);
 
 // // add menu toggle to bars icon in nav bar
 // document

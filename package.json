@@ -24,6 +24,6 @@
   "dependencies": {
     "lodash": "^4.17.21",
     "navigo": "^8.10.1",
-    "parcel-bundler": "1.12.3"
+    "parcel-bundler": "^1.12.3"
   }
 }

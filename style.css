@@ -12,30 +12,30 @@ html {
 .container {
   width: 100%;
   height: 100vh;
-  background-color: #12121f; "Background not changing"
+  background-color: blueviolet;
   color: #eee;
   display: flex;
-  justify-content: center; "Not going to the center"
+  justify-content: center;
   align-items: center;
 }
 
 .calendar {
   width: 45rem;
   height: 52rem;
-  background-color: #222227; "Box shadow color not changing"
+  background-color: gray;
   box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
 }
 
 .month {
   width: 100%;
   height: 12rem;
-  background-color: #167e56;
+  background-color: violet;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
   text-align: center;
-  text-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.5;
+  text-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.5);
 }
 
 .month i {
@@ -58,7 +58,7 @@ font-size: 1.6rem;
 .weekdays {
   width: 100%;
   height: 5rem;
-  padding: 0, 0.4rem;     "Not lining out"
+  padding: 0 0.4rem;
   display: flex;
   align-items: center;
 }
@@ -67,7 +67,7 @@ font-size: 1.6rem;
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
-  width: calc(44.2tem/7);
+  width: calc(44.2rem/7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,24 +76,24 @@ font-size: 1.6rem;
 
 .days {
   width: 100%;
-  display: flex; "Days Not Wrapping"
+  display: flex;
   flex-wrap: wrap;
   padding: 0.2rem;
 }
 
 .days div {
   font-size: 1.4rem;
-  margin: 0.3rem;      "Days should be lined out"
-  width: calc(40.2/7);
+  margin: 0.3rem;
+  width: calc(40.2rem/7);
   height: 5rem;
   display: flex;
-  justify-content: center;     "Calendar should be showing"
+  justify-content: center;
   align-items: center;
-  text-shadow: 0 0.3rem 0.5rem rgbs(0, 0, 0, 0.5);
-  transition: background-color 0.2;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s;
   }
 
-  .days div:hover:not(today) {
+  .days div:hover:not(.today) {
     background-color: #262626;
     border: 0.2rem solid #777;
     cursor: pointer;
@@ -108,4 +108,80 @@ font-size: 1.6rem;
   background-color: #167e56;
 }
 
+#current-date {
+  color: white;
+}
+@media (min-width: 550px){
+  nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 0;
+    width: 100%;
+  }
+  nav > ul > a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.5rem 0.5rem;
+    width: 100%;
+  }
+  nav > .fa-bars {
+    display: none;
+    color: violet;
+    background-color: violet ;
+  }
+}
+@media (max-width: 549px){
+  .hidden--mobile {
+    display: none !important;
+  }
 
+  nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+nav > i {
+  padding: 1rem;
+  font-size: 2em;
+}
+
+nav > ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 0;
+}
+nav > ul a {
+  padding: .5rem;
+  width: 100%;
+}
+}
+
+
+header h1 {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  color: black;
+}
+
+nav {
+  list-style:none;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4);
+}
+
+nav a {
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  background-color: violet;
+  width: 100%;
+
+}
